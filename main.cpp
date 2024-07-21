@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-  ifstream file("shakespeare-cleaned5.txt"); //open file with shakespeare's wprds
+  ifstream file("shakespeare-cleaned.txt"); //open file with shakespeare's wprds
   LinkedList** arrayOfPointers = new LinkedList*[35]; //create poiner for pointers
   string line; //create string to later hold shakespeare's words
   
