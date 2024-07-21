@@ -3,15 +3,14 @@ CXXFLAGS = -Wall -std=c++11
 
 OBJECTS = main.o linkedLists.o
 
-main: $(OBJECTS)
-	    $(CXX) -g $(CXXFLAGS) -o $@ main.o linkedLists.o
+bard: $(OBJECTS)
+	$(CXX) -g $(CXXFLAGS) -o $@ $(OBJECTS)
 
-main.o: main.cpp linkedLists.h linkedLists.cpp
-		$(CXX) -g $(CXXFLAGS) -c main.cpp
+main.o: main.cpp linkedLists.h
+	$(CXX) -g $(CXXFLAGS) -c main.cpp
 
 linkedLists.o: linkedLists.cpp linkedLists.h
-		$(CXX) -g $(CXXFLAGS) -c linkedLists.cpp
+	$(CXX) -g $(CXXFLAGS) -c linkedLists.cpp
 
 clean:
-	rm *.o
-	rm main
+	rm -f *.o bard
